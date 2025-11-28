@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producto2-deployment
+  labels:
+    app: producto2
+spec:
+  replicas: 2 # Puedes empezar con 2 réplicas
+  selector:
+    matchLabels:
+      app: producto2
+  template:
+    metadata:
+      labels:
+        app: producto2
+    spec:
+      containers:
+      - name: producto2-app
+        image: alledoh/producto2:latest # ¡ACTUALIZAR AQUÍ!
+        ports:
+        - containerPort: 8080 # El puerto que expone tu aplicación Go
