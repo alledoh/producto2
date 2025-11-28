@@ -18,4 +18,4 @@ spec:
       - name: producto2-app
         image: alledoh/producto2:latest # ¡ACTUALIZAR AQUÍ!
         ports:
-        - containerPort: 8080 # El puerto que expone tu aplicación Go
+        - containerPort: 3000 # El puerto que expone tu aplicación Go
